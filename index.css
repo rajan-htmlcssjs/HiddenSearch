@@ -1,0 +1,41 @@
+body {
+  height: 100vh;
+  background: linear-gradient(rgb(81, 166, 216), rgb(67, 52, 204));
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.container input {
+  position: relative;
+  width: 30px;
+  margin: 0;
+  padding: 5px 10px;
+  height: 40px;
+  border: 0;
+  font-size: 18px;
+  transition: width 1s ease-out;
+}
+.container input:focus {
+  outline: none;
+}
+.container .btn {
+  position: absolute;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  border-width: 0;
+  background: #fff;
+
+  transition: 1s ease-out;
+}
+.container.active input {
+  width: 250px;
+}
+.container.active .btn {
+  transform: translateX(150px) rotateY(360deg);
+}
